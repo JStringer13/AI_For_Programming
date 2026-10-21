@@ -24,7 +24,7 @@ def main():
             return
         gc_percentage = (bases.count("G") + bases.count("C")) / len(bases) * 100
         if args.min_gc is None or gc_percentage > args.min_gc:
-            print(f">{header}\t{gc_percentage:.3f}%")
+            print(f">{header}\t{gc_percentage:.4f}%")
 
     with open(args.fasta_path) as fasta_file:
         for line in fasta_file:
